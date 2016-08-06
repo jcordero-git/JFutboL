@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/idRL">
+
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <Space android:id="@+id/dummy"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProvince"
+                android:layout_below="@+id/dummy"
+                android:layout_toRightOf="@+id/dummy"
+                android:layout_toLeftOf="@+id/dummy"
+                android:layout_alignParentLeft="true"
+                android:hint="Province"
+                android:editable="false"
+                android:focusable="false" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCanton"
+                android:layout_below="@+id/dummy"
+                android:layout_toRightOf="@+id/dummy"
+                android:layout_toLeftOf="@+id/dummy"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:hint="Canton"
+                android:editable="false"
+                android:focusable="false" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Player Skills"
+            android:id="@+id/btnPlayerSkills"
+            android:layout_below="@+id/txtCanton"
+            android:layout_marginTop="5dp" />
+
+        </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,227 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="jfutbol.com.jfutbol.MyTeams"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/primary"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgImage"
+            android:layout_weight="0.20"
+            android:src="@drawable/logo_here"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
+
+        <TextView
+        android:id="@+id/lbTeamName"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:textColor="#212121"
+        android:layout_toRightOf="@+id/imgImage"
+        android:layout_alignParentTop="true"
+        android:textSize="15dp"
+
+            android:textStyle="bold"
+
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="--" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbCanton"
+            android:textSize="14dp"
+            android:textIsSelectable="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="false"
+            android:layout_below="@+id/lbTeamName"
+            android:hint="--"
+            android:layout_toRightOf="@+id/imgImage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbComma"
+            android:textSize="14dp"
+            android:textIsSelectable="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="false"
+            android:layout_below="@+id/lbTeamName"
+            android:hint=","
+            android:layout_toRightOf="@+id/lbCanton"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbProvince"
+            android:textSize="14dp"
+            android:textIsSelectable="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/lbTeamName"
+            android:layout_toRightOf="@+id/lbComma"
+            android:hint="--"
+            android:layout_alignParentLeft="false" />
+
+        <TextView
+            android:id="@+id/lbCaptainName"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/imgImage"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/lbCanton"
+            android:textIsSelectable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imgCountPlayers"
+            android:layout_below="@+id/lbCaptainName"
+            android:layout_alignParentRight="false"
+            android:layout_toRightOf="@+id/imgImage"
+            android:src="@drawable/count_players" />
+
+        <TextView
+            android:id="@+id/lbCountplayers"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/imgCountPlayers"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/lbCaptainName"
+            android:textIsSelectable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="14dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+        android:id="@+id/winID"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:textColor="#212121"
+            android:layout_alignParentTop="false"
+        android:textSize="16sp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/imgImage"
+            android:textStyle="italic"
+
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_toLeftOf="@+id/lostID" />
+
+        <TextView
+            android:id="@+id/lostID"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:textColor="#212121"
+            android:layout_alignParentTop="false"
+            android:textSize="16sp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/imgImage"
+            android:textStyle="italic"
+
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_toLeftOf="@+id/tieID" />
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tieID"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:textColor="#212121"
+            android:layout_alignParentTop="false"
+            android:textSize="16sp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/imgImage"
+            android:textStyle="italic"
+
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+
+    <!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_photo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_pages"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:layout_toRightOf="@+id/person_photo"
+            android:layout_alignParentTop="true"
+            android:textSize="30sp"
+            android:text="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_age"
+            android:layout_toRightOf="@+id/person_photo"
+            android:layout_below="@+id/text1"
+            android:text="text" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go"
+            android:id="@+id/btnGo"
+            android:layout_toRightOf="@+id/text1" />
+
+    </RelativeLayout>
+
+-->
+
+
+</FrameLayout>

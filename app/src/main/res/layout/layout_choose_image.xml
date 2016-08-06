@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/idRL">
+
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <Space android:id="@+id/dummy"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible" />
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:id="@+id/RL1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/btnImage1"
+                android:src="@drawable/field1"
+                android:layout_alignParentLeft="true" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/btnImage2"
+                android:src="@drawable/field2"
+                android:layout_alignParentLeft="false"
+                android:layout_centerHorizontal="true" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/btnImage3"
+                android:src="@drawable/field3"
+                android:layout_alignParentLeft="false"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:id="@+id/RL2"
+            android:layout_below="@+id/RL1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/primary"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/btnImage4"
+            android:src="@drawable/field4"
+            android:layout_alignParentLeft="true"
+            android:focusableInTouchMode="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/primary"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/btnImage5"
+            android:src="@drawable/field5"
+            android:layout_alignParentLeft="false"
+            android:layout_centerHorizontal="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/primary"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/btnImage6"
+            android:src="@drawable/field6"
+            android:layout_alignParentLeft="false"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:id="@+id/RL3"
+            android:layout_below="@+id/RL2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/btnImage7"
+                android:src="@drawable/field7"
+                android:layout_alignParentLeft="true" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/btnImage8"
+                android:src="@drawable/field8"
+                android:layout_alignParentLeft="false"
+                android:layout_centerHorizontal="true" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/btnImage9"
+                android:src="@drawable/field9"
+                android:layout_alignParentLeft="false"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:id="@+id/RL4"
+            android:layout_below="@+id/RL3"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbSoccerCenterName"
+                android:hint="Or select a image from your gallery folder"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/btnImage"
+                android:src="@drawable/gallery"
+                android:layout_alignParentLeft="false"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/lbSoccerCenterName"
+                android:focusableInTouchMode="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

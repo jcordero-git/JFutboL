@@ -1,0 +1,137 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jfutbol.com.jfutbol.Team_Info"
+    android:orientation="vertical"
+    android:id="@+id/idRL">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/Relative2"
+        android:layout_marginTop="55dp">
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="16dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idRL_team_info">
+
+            <Space android:id="@+id/dummy"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/imgTeam"
+                android:layout_weight="0.20"
+                android:src="@drawable/logo_here"
+                android:focusableInTouchMode="true"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbTeamName"
+                android:hint="--"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false"
+                android:layout_toRightOf="@+id/imgTeam"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbCanton"
+                android:textSize="14dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="false"
+                android:layout_below="@+id/lbTeamName"
+                android:hint="--"
+                android:layout_toRightOf="@+id/imgTeam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbComma"
+                android:textSize="14dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="false"
+                android:layout_below="@+id/lbTeamName"
+                android:hint=","
+                android:layout_toRightOf="@+id/lbCanton"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbProvince"
+                android:textSize="14dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/lbTeamName"
+                android:layout_toRightOf="@+id/lbComma"
+                android:hint="--"
+                android:layout_alignParentLeft="false" />
+
+            <View android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:id="@+id/space"
+                android:background="@android:color/darker_gray"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_below="@+id/imgTeam" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:layout_gravity="left|top"
+            android:layout_below="@+id/idRL_team_info" />
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/add_player"
+        fab:fab_colorNormal="@color/primary"
+        fab:fab_colorPressed="@color/accent"
+        fab:fab_colorRipple="@color/ripple"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+</FrameLayout>

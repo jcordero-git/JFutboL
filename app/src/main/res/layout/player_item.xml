@@ -1,0 +1,146 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="jfutbol.com.jfutbol.SearchPlayer"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/primary"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/playerPhotoID"
+            android:layout_gravity="left|top"
+            android:src="@drawable/default_player"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginRight="10dp"
+            android:padding="1dp"/>
+
+        <TextView
+        android:id="@+id/txtPlayerCompleteNameID"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:textColor="#212121"
+        android:layout_toRightOf="@+id/playerPhotoID"
+        android:layout_alignParentTop="true"
+        android:textSize="15dp"
+
+            android:textStyle="bold"
+
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textIsSelectable="false"
+            android:hint="--" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAge"
+            android:layout_below="@+id/txtPlayerCompleteNameID"
+            android:layout_toRightOf="@+id/playerPhotoID"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textSize="14dp"
+            android:textIsSelectable="false"
+            android:hint="--" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/captain"
+            android:layout_below="@+id/txtPlayerCompleteNameID"
+            android:layout_alignParentRight="false"
+            android:layout_toLeftOf="@+id/status"
+            android:layout_marginRight="5dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/status"
+            android:layout_below="@+id/txtPlayerCompleteNameID"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:id="@+id/txtSkills"
+            android:layout_below="@+id/txtAge"
+            android:layout_toRightOf="@+id/playerPhotoID"
+            android:textIsSelectable="false"
+            android:textSize="10dp"
+            android:hint="--" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPosition"
+            android:layout_below="@+id/txtSkills"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+
+    <!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_photo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_pages"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:layout_toRightOf="@+id/person_photo"
+            android:layout_alignParentTop="true"
+            android:textSize="30sp"
+            android:text="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/person_age"
+            android:layout_toRightOf="@+id/person_photo"
+            android:layout_below="@+id/text1"
+            android:text="text" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go"
+            android:id="@+id/btnGo"
+            android:layout_toRightOf="@+id/text1" />
+
+    </RelativeLayout>
+
+-->
+
+
+</FrameLayout>

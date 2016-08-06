@@ -1,0 +1,96 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="jfutbol.com.jfutbol.Add_New_Soccer_Center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/idRL">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2"
+        android:layout_marginTop="55dp"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/btnImage"
+                android:src="@drawable/gallery"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentLeft="false" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/txtNewSoccerField"
+                android:layout_gravity="center_horizontal"
+                android:hint="Soccer Field Name"
+                android:inputType="text|textCapWords"
+                android:maxLength="30"
+                android:layout_toRightOf="@+id/btnImage"/>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/txtNewSoccerField"
+            android:layout_toRightOf="@+id/btnImage">
+
+            <Space android:id="@+id/dummy"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtOpenTime"
+                android:layout_toRightOf="@+id/dummy"
+                android:layout_toLeftOf="@+id/dummy"
+                android:layout_alignParentLeft="true"
+                android:hint="Open Time"
+                android:inputType="time|date"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_below="@+id/dummy" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCloseTime"
+                android:layout_toRightOf="@+id/dummy"
+                android:layout_toLeftOf="@+id/dummy"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:hint="Close Time"
+                android:inputType="time|date"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_below="@+id/dummy" />
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

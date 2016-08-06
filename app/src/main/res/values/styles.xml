@@ -1,0 +1,33 @@
+<resources>
+
+    Base application theme.
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+    </style>
+
+<!--
+    <style name="AppTheme" parent="android:Theme.Material">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
+    -->
+
+    <style name="Title">
+        <item name="android:textSize">16pt</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="Link">
+        <item name="android:textSize">8pt</item>
+    </style>
+
+    <style name="TextBox">
+        <item name="android:textSize">10pt</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+</resources>

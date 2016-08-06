@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+      <CheckBox android:id="@+id/cbGK" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:text="@string/GK"
+        style="@style/TextBox"
+        android:layout_margin="10dp"
+        android:layout_column="0"
+          android:hint="GK" />
+
+    <CheckBox android:id="@+id/cbSW_LIB" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/SW_LIB"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="SW_LIB" />
+
+    <CheckBox android:id="@+id/cbCB" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/CB"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="CB" />
+
+    <CheckBox android:id="@+id/cbRB" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/RB"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="RB" />
+
+    <CheckBox android:id="@+id/cbLB" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/LB"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="LB" />
+
+    <CheckBox android:id="@+id/cbRWB" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/RWB"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="RWB" />
+
+    <CheckBox android:id="@+id/cbLWB" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/LWB"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="LWB" />
+
+    <CheckBox android:id="@+id/cbDMF" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/DMF"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="DMF" />
+
+    <CheckBox android:id="@+id/cbCMF" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/CMF"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="CMF" />
+
+    <CheckBox android:id="@+id/cbRMF" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/RMF"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="RMF" />
+
+    <CheckBox android:id="@+id/cbLMF" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/LMF"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="LMF" />
+
+    <CheckBox android:id="@+id/cbAMF" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/AMF"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="AMF" />
+
+    <CheckBox android:id="@+id/cbSS" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/SS"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="SS" />
+
+    <CheckBox android:id="@+id/cbRWF_RW" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/RWF_RW"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="RWF_RW" />
+
+    <CheckBox android:id="@+id/cbLWF_LW" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/LWF_LW"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="LWF_LW" />
+
+    <CheckBox android:id="@+id/cbCF" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/CF"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="CF" />
+
+    <CheckBox android:id="@+id/cbST" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/ST"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="ST" />
+
+    <CheckBox android:id="@+id/cbFCF" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="@string/FCF"
+        style="@style/TextBox"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:hint="FCF" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

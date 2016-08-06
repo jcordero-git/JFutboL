@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="jfutbol.com.jfutbol.MyTeams"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/primary"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgSoccerField"
+            android:layout_weight="0.20"
+            android:src="@drawable/field1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <TextView
+        android:id="@+id/lbSoccerCenterdName"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:textColor="#212121"
+        android:layout_toRightOf="@+id/imgSoccerField"
+        android:layout_alignParentTop="true"
+        android:textSize="15dp"
+            android:text="--"
+            android:textStyle="bold"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:id="@+id/lbSoccerFieldName"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="false"
+            android:textSize="14dp"
+            android:text="--"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_toRightOf="@+id/imgSoccerField"
+            android:layout_below="@+id/lbSoccerCenterdName" />
+
+    </RelativeLayout>
+
+</FrameLayout>

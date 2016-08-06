@@ -1,0 +1,23 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="privacy_show_email"
+        android:title="@string/pref_title_show_email"
+        android:defaultValue="1"
+        android:entries="@array/pref_yes_no_titles"
+        android:entryValues="@array/pref_yes_no_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <ListPreference
+        android:key="privacy_show_phone"
+        android:title="@string/pref_title_show_phone"
+        android:defaultValue="1"
+        android:entries="@array/pref_yes_no_titles"
+        android:entryValues="@array/pref_yes_no_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+
+
+</PreferenceScreen>

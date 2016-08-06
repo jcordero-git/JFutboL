@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jfutbol.com.jfutbol" >
+
+    <!-- [START gcm_permission] -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- [END gcm_permission] -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:targetSdkVersion="9"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="jfutbol.com.jfutbol.Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.Login"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.MainMenu"
+            android:label="@string/title_activity_main_menu" >
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.User_Register"
+            android:label="@string/title_activity_user__register"
+            android:parentActivityName="jfutbol.com.jfutbol.Login" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.Login" />
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="jfutbol.com.jfutbol.MainMenu" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.MainMenu" />
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.Add_New_Team"
+            android:label="@string/title_activity_add_new_team"
+            android:parentActivityName="jfutbol.com.jfutbol.MainMenu" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.MainMenu" />
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.Team_Info"
+            android:label="@string/title_activity_team__info"
+            android:parentActivityName="jfutbol.com.jfutbol.MainMenu" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.MainMenu" />
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.Match_Info"
+            android:parentActivityName="jfutbol.com.jfutbol.MainMenu" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.MainMenu" />
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.MyAccount"
+            android:label="@string/user_myaccount_title"
+            android:parentActivityName="jfutbol.com.jfutbol.MainMenu" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.MainMenu" />
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.SearchPlayer"
+            android:label="@string/title_activity_search_player"
+            android:parentActivityName="jfutbol.com.jfutbol.Team_Info" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.Team_Info" />
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.SearchMatch"
+            android:label="@string/title_activity_search_match" >
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.SearchTeam"
+            android:label="@string/title_activity_search_team" >
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.Code_Activation"
+            android:label="@string/title_activity_code__activation" >
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.Add_New_Soccer_Center"
+            android:label="@string/title_activity_add_new_soccer_center"
+            android:parentActivityName="jfutbol.com.jfutbol.MainMenu" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.MainMenu" />
+        </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.Add_New_Soccer_Field"
+            android:label="@string/title_activity_add_new_soccer_field"
+            android:parentActivityName="jfutbol.com.jfutbol.Add_New_Soccer_Center" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.Add_New_Soccer_Center" />
+        </activity>
+        <activity
+        android:name="jfutbol.com.jfutbol.Soccer_Center_Info"
+        android:parentActivityName="jfutbol.com.jfutbol.MainMenu" >
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="jfutbol.com.jfutbol.MainMenu" />
+    </activity>
+        <activity
+            android:name="jfutbol.com.jfutbol.Soccer_Field_Info_Reserve"
+            android:parentActivityName="jfutbol.com.jfutbol.MainMenu" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.MainMenu" />
+        </activity>
+
+        <activity
+            android:name="jfutbol.com.jfutbol.UserProfile"
+            android:parentActivityName="jfutbol.com.jfutbol.MainMenu" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jfutbol.com.jfutbol.MainMenu" />
+        </activity>
+
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="socialmatch.com.socialmatch" />
+            </intent-filter>
+        </receiver>
+        <!-- [END gcm_receiver] -->
+
+        <!-- [START gcm_listener] -->
+        <service
+            android:name="jfutbol.com.jfutbol.MyGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <!-- [END gcm_listener] -->
+        <!-- [START instanceId_listener] -->
+        <service
+            android:name="jfutbol.com.jfutbol.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <!-- [END instanceId_listener] -->
+        <service
+            android:name="jfutbol.com.jfutbol.RegistrationIntentService"
+            android:exported="false">
+        </service>
+
+
+    </application>
+
+</manifest>

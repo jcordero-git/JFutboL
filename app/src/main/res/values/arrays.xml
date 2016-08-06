@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="positions">
+        <item>Portero</item>
+        <item>Defensa</item>
+        <item>Central</item>
+        <item>Delantero</item>
+    </string-array>
+
+    <string-array name="lineups">
+        <item>Pick a lineup</item>
+        <item>2-2-1</item>
+        <item>3-1-1</item>
+    </string-array>
+
+</resources>

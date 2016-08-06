@@ -1,0 +1,103 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:id="@+id/RLLogin">
+
+    <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+        android:padding="30dp">
+
+    <ImageView
+        android:layout_width="190dp"
+        android:layout_height="85dp"
+        android:id="@+id/logo"
+        android:src="@drawable/icon_logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="30dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/txtEmail"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/hintEmail"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/logo" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:id="@+id/txtPassword"
+        android:layout_gravity="center_horizontal"
+        android:elegantTextHeight="true"
+        android:hint="@string/hintPassword"
+        android:layout_below="@+id/txtEmail"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:layout_weight="1.13"
+        android:layout_below="@+id/txtPassword"
+        android:id="@+id/VLlogin"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnLogin"
+            android:id="@+id/btLogin"
+            android:nestedScrollingEnabled="false"
+            android:enabled="false"
+            android:background="@color/primary" />
+
+    </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/VLlogin"
+            android:layout_alignParentBottom="false">
+
+            <TextView
+                android:layout_alignParentRight="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/register_link"
+                android:id="@+id/linkUserRegister"
+                android:textColor="@android:color/holo_blue_dark"
+                style="@style/Link"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="70dp" />
+
+            <TextView
+                style="@style/Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/forgot_password_link"
+                android:id="@+id/linkForgotPassword"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

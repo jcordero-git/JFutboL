@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="jfutbol.com.jfutbol.Add_New_Soccer_Center">
+
+    <item
+        android:id="@+id/saveAndNew"
+        android:title="@string/saveAndNew"
+        android:icon="@drawable/add_team"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/send"
+        android:title="@string/send"
+        android:icon="@drawable/send"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom" />
+
+</menu>

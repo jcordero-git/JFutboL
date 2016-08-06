@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idRLTeams"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <Space
+            android:id="@+id/space4"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:layout_below="@+id/lbMatchDate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lbMatchDate"
+            android:layout_centerHorizontal="true"
+            android:text="--/--/--" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/lbSoccerCenterName"
+            android:layout_centerHorizontal="true"
+            android:text="--"
+            android:layout_below="@+id/lbMatchDate" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="false"
+            android:layout_below="@+id/lbSoccerCenterName"
+            android:layout_toRightOf="@+id/space4"
+            android:layout_toLeftOf="@+id/space4" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:id="@+id/imgTeam1"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_logo" />
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/lbTeam1Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:gravity="center|center_vertical"
+                android:textColor="#212121"
+                android:layout_alignParentTop="false"
+                android:textSize="15sp"
+                android:text="--"
+                android:textStyle="bold"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentStart="false"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imgTeam1"
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/status"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pending"
+            android:layout_below="@+id/space" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout4"
+            android:layout_below="@+id/lbSoccerCenterName"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/space4"
+            android:layout_toLeftOf="@+id/space4" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/primary"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:id="@+id/imgTeam2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_logo" />
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/lbTeam2Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:gravity="center|center_vertical"
+                android:textColor="#212121"
+                android:textSize="15sp"
+                android:text="--"
+                android:textStyle="bold"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imgTeam2"
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/lbGoalsTeam1"
+            android:layout_below="@+id/lbSoccerCenterName"
+            android:textSize="30dp"
+            android:layout_toLeftOf="@+id/space"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="-"
+            android:id="@+id/space"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/lbSoccerCenterName"
+            android:textSize="30dp"
+            android:textIsSelectable="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/lbGoalsTeam2"
+            android:layout_below="@+id/lbSoccerCenterName"
+            android:textSize="30dp"
+            android:layout_toRightOf="@+id/space"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

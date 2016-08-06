@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jfutbol.com.jfutbol.SearchPlayer"
+    android:orientation="vertical"
+    android:id="@+id/idRL">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:padding="16dp">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSearchTeam"
+        android:hint="Click to search teams"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_toLeftOf="@+id/btnLocation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/listView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:id="@+id/btnLocation"
+        android:layout_alignParentRight="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/listView"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:layout_below="@+id/btnLocation" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
