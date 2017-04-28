@@ -117,8 +117,8 @@ public class Add_New_Team extends Activity {
 
                     if (verifyRequiredFields() == true) {
                         // EditText txtNewTeam = (EditText) findViewById(R.id.txtNewTeam);
-                        // Team newTeam = new Team(0, user.getUserId(), txtNewTeam.getText().toString().trim());
-                        newTeam.setOwnerId(user.getUserId());
+                        // Team newTeam = new Team(0, user.getId(), txtNewTeam.getText().toString().trim());
+                        newTeam.setOwnerId(user.getId());
                         newTeam.setName(txtFields[0].getText().toString());
                         newTeam.setEncodedImage(encodedImage);
                         AddNewTeamTask task = new AddNewTeamTask();
@@ -320,7 +320,7 @@ public class Add_New_Team extends Activity {
                                     int proviceIdSelected = 0;
                                     for (int i = 0; i < provinces.length; i++) {
                                         if (ProvincesChar[which].toString().equals(provinces[i].getName())) {
-                                            proviceIdSelected = provinces[i].getProvinceId();
+                                            proviceIdSelected = provinces[i].getId();
                                             break;
                                         }
                                     }
@@ -389,7 +389,7 @@ public class Add_New_Team extends Activity {
                                     for (int i = 0; i < states.length; i++) {
                                         if (StatesChar[which].toString().equals(states[i].getName())) {
                                             state = states[i];
-                                            newTeam.setCantonId(state.getCantonId());
+                                            newTeam.setCantonId(state.getId());
                                             break;
                                         }
                                     }

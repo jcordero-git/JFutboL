@@ -86,7 +86,7 @@ public class MyMatches extends Fragment {
         protected mMatches[] doInBackground(User... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/matches/"+user.getUserId());
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/matches/"+user.getId());
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {

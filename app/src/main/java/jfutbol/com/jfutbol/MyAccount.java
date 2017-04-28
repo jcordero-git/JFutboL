@@ -170,7 +170,7 @@ public class MyAccount extends Activity {
         txtFields[8].setText(user.getCantonName());
         btnImage= (ImageView) findViewById(R.id.btnImage);
 
-        aq.id(R.id.btnImage).image(url_host_connection+"/images/profile/"+user.getUserId()+".png", memCache, fileCache);
+        aq.id(R.id.btnImage).image(url_host_connection+"/images/profile/"+user.getId()+".png", memCache, fileCache);
 
         btnPlayerSkills = (Button) findViewById(R.id.btnPlayerSkills);
 
@@ -567,7 +567,7 @@ public class MyAccount extends Activity {
                                     int proviceIdSelected = 0;
                                     for (int i = 0; i < provinces.length; i++) {
                                         if (ProvincesChar[which].toString().equals(provinces[i].getName())) {
-                                            proviceIdSelected = provinces[i].getProvinceId();
+                                            proviceIdSelected = provinces[i].getId();
                                             break;
                                         }
                                     }
@@ -635,7 +635,7 @@ public class MyAccount extends Activity {
                                     for (int i = 0; i < cantons.length; i++) {
                                         if (CantonsChar[which].toString().equals(cantons[i].getName())) {
                                             canton = cantons[i];
-                                            user.setCantonId(  canton.getCantonId());
+                                            user.setCantonId(  canton.getId());
                                             break;
                                         }
                                     }

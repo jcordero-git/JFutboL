@@ -193,10 +193,10 @@ public class SearchTeam extends Activity {
             final HttpGet httpGetMyTeams;
 
             if(myTeams==true && user!=null)
-                request=url_host_connection_secure+"/team/"+user.getUserId();
+                request=url_host_connection_secure+"/team/"+user.getId();
 
             if(myTeams==false && user!=null)
-                request=url_host_connection_secure+"/team/noMyTeams/"+user.getUserId();
+                request=url_host_connection_secure+"/team/noMyTeams/"+user.getId();
 
             httpGetMyTeams= new HttpGet(request);
 

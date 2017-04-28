@@ -5,7 +5,7 @@ package jfutbol.com.jfutbol.model;
  */
 public class mSoccerCenters {
 
-    int soccerCenterId;
+    int id;
     int ownerId;
     String name;
     String address;
@@ -19,12 +19,12 @@ public class mSoccerCenters {
     String cantonName;
     String encodedImage;
 
-    public int getSoccerCenterId() {
-        return soccerCenterId;
+    public int getId() {
+        return id;
     }
 
-    public void setSoccerCenterId(int soccerCenterId) {
-        this.soccerCenterId = soccerCenterId;
+    public void setId(int soccerCenterId) {
+        this.id = soccerCenterId;
     }
 
     public int getOwnerId() {

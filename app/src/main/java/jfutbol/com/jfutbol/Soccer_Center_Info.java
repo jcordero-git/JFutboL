@@ -97,7 +97,7 @@ public class Soccer_Center_Info extends Activity {
         });
 
         aq = new AQuery(Soccer_Center_Info.this, root);
-        aq.id(R.id.imgSoccerCenter).image(url_host_connection + "/images/soccercenter/" + soccerCenter.getSoccerCenterId() + ".png", memCache, fileCache);
+        aq.id(R.id.imgSoccerCenter).image(url_host_connection + "/images/soccercenter/" + soccerCenter.getId() + ".png", memCache, fileCache);
         lbSoccerCenterName.setText(soccerCenter.getName());
         lbPhone.setText(soccerCenter.getPhone());
 
@@ -121,7 +121,7 @@ public class Soccer_Center_Info extends Activity {
         protected mSoccerFields[] doInBackground(mSoccerFields... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGet= new HttpGet(url_host_connection_secure+"/soccercenter/"+soccerCenter.getSoccerCenterId()+"/soccerfields");
+            final HttpGet httpGet= new HttpGet(url_host_connection_secure+"/soccercenter/"+soccerCenter.getId()+"/soccerfields");
             httpGet.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -173,8 +173,8 @@ public class Soccer_Center_Info extends Activity {
                                 if(item==1)
                                 {
                                     try {
-                                        String soccerCenterId=soccerCenter.getSoccerCenterId()+"";
-                                        confirmDeleteSoccerField("Do you want to delete this Soccer Field: " + finalSelected.getName() + "?", soccerCenterId, finalSelected.getSoccerFieldId() + "");
+                                        String soccerCenterId=soccerCenter.getId()+"";
+                                        confirmDeleteSoccerField("Do you want to delete this Soccer Field: " + finalSelected.getName() + "?", soccerCenterId, finalSelected.getId() + "");
 
                                     } catch (Exception e) {
                                         e.printStackTrace();

@@ -5,15 +5,15 @@ package jfutbol.com.jfutbol.model;
  */
 public class mProvinces {
 
-    int provinceId;
+    int id;
     String name;
 
-    public int getProvinceId() {
-        return provinceId;
+    public int getId() {
+        return id;
     }
 
-    public void setProvinceId(int provinceId) {
-        this.provinceId = provinceId;
+    public void setId(int provinceId) {
+        this.id = provinceId;
     }
 
     public String getName() {

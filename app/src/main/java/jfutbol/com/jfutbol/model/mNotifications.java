@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class mNotifications {
 
-    private int notificationsId;
+    private int id;
     String shortNotification;
     String notification;
     int userId;
@@ -19,12 +19,12 @@ public class mNotifications {
     int keyId;
     int img;
 
-    public int getNotificationsId() {
-        return notificationsId;
+    public int getId() {
+        return id;
     }
 
-    public void setNotificationsId(int notificationsId) {
-        this.notificationsId = notificationsId;
+    public void setId(int notificationsId) {
+        this.id = notificationsId;
     }
 
     public String getShortNotification() { return shortNotification; }

@@ -112,7 +112,7 @@ public class Team_Info extends Activity {
         list = (ListView) findViewById(R.id.listView);
 
         aq = new AQuery(Team_Info.this, root);
-        aq.id(R.id.imgTeam).image(url_host_connection+"/images/team/"+team.getTeamId()+".png", memCache, fileCache);
+        aq.id(R.id.imgTeam).image(url_host_connection+"/images/team/"+team.getId()+".png", memCache, fileCache);
         lbTeamName.setText(team.getName());
         lbProvince.setText(team.getProvinceName());
         lbCanton.setText(team.getCantonName());
@@ -184,7 +184,7 @@ public class Team_Info extends Activity {
         protected User[] doInBackground(User... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/team/"+team.getTeamId()+"/players");
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/team/"+team.getId()+"/players");
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -239,8 +239,8 @@ public class Team_Info extends Activity {
                                 if(item==0)
                                 {
                                     try {
-                                        String teamId=team.getTeamId()+"";
-                                        confirmCaptainPlayer("Do you want to make this player: " + finalSelected.getFirstName().toUpperCase() + " as captain?", teamId , finalSelected.getUserId() + "");
+                                        String teamId=team.getId()+"";
+                                        confirmCaptainPlayer("Do you want to make this player: " + finalSelected.getFirstName().toUpperCase() + " as captain?", teamId , finalSelected.getId() + "");
 
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -249,8 +249,8 @@ public class Team_Info extends Activity {
                                 if(item==1)
                                 {
                                     try {
-                                        String teamId=team.getTeamId()+"";
-                                        confirmDeletePlayer("Do you want to delete this player: " + finalSelected.getFirstName().toUpperCase() + "?", teamId , finalSelected.getUserId() + "");
+                                        String teamId=team.getId()+"";
+                                        confirmDeletePlayer("Do you want to delete this player: " + finalSelected.getFirstName().toUpperCase() + "?", teamId , finalSelected.getId() + "");
 
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -679,7 +679,7 @@ public class Team_Info extends Activity {
                         @Override
                         public void onClick(DialogInterface dialog, int item) {
 
-                            String idPositionToSearch=skills[item].getSkillId();
+                            String idPositionToSearch=skills[item].getId();
                             String positionToSearch=skillsChar[item].toString();
                             params.putString("team", teamJson );
                             params.putString("idPositionToAdd", idPositionToSearch);

@@ -148,8 +148,8 @@ public class Match_Info extends Activity {
 
         aq = new AQuery(Match_Info.this, root);
 
-        aq.id(imgTeam1).image(url_host_connection + "/images/team/" + match.getTeam1ID() + ".png", true, true);
-        aq.id(imgTeam2).image(url_host_connection + "/images/team/" + match.getTeam2ID() + ".png", true, true);
+        aq.id(imgTeam1).image(url_host_connection + "/images/team/" + match.getTeam1Id() + ".png", true, true);
+        aq.id(imgTeam2).image(url_host_connection + "/images/team/" + match.getTeam2Id() + ".png", true, true);
 
         lbTeam1Name.setText(match.getTeam1Name().toString());
         lbTeam2Name.setText(match.getTeam2Name().toString());
@@ -218,7 +218,7 @@ public class Match_Info extends Activity {
         protected User[] doInBackground(String... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/match/"+match.getMatchID()+"/"+match.getTeam1ID()+"/players");
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/match/"+match.getId()+"/"+match.getTeam1Id()+"/players");
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -270,7 +270,7 @@ public class Match_Info extends Activity {
                 }
             });
 
-            if(match.getMyTeamId()== match.getTeam1ID()) {
+            if(match.getMyTeamId()== match.getTeam1Id()) {
                 list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                     @Override
                     public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) {
@@ -293,9 +293,9 @@ public class Match_Info extends Activity {
                                 public void onClick(DialogInterface dialog, int item) {
                                     if (item == 0) {
                                         try {
-                                            if(finalSelected.getUserId()!=match.getTeam1OwnerId()) {
-                                                String matchId = match.getMatchID() + "";
-                                                confirmDeletePlayer("Do you want to delete this player: " + finalSelected.getFirstName().toUpperCase() + "?", matchId, finalSelected.getUserId() + "");
+                                            if(finalSelected.getId()!=match.getTeam1OwnerId()) {
+                                                String matchId = match.getId() + "";
+                                                confirmDeletePlayer("Do you want to delete this player: " + finalSelected.getFirstName().toUpperCase() + "?", matchId, finalSelected.getId() + "");
                                             }
                                             else{
                                                 String message="You can not remove the team owner";
@@ -338,7 +338,7 @@ public class Match_Info extends Activity {
         protected User[] doInBackground(String... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/match/"+match.getMatchID()+"/"+match.getTeam2ID()+"/players");
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/match/"+match.getId()+"/"+match.getTeam2Id()+"/players");
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -389,7 +389,7 @@ public class Match_Info extends Activity {
                     startActivity(user_profile);
                 }
             });
-            if(match.getMyTeamId()== match.getTeam2ID()) {
+            if(match.getMyTeamId()== match.getTeam2Id()) {
                 list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                     @Override
                     public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) {
@@ -412,9 +412,9 @@ public class Match_Info extends Activity {
                                 public void onClick(DialogInterface dialog, int item) {
                                     if (item == 0) {
                                         try {
-                                            if(finalSelected.getUserId()!=match.getTeam2OwnerId()) {
-                                                String matchId = match.getMatchID() + "";
-                                                confirmDeletePlayer("Do you want to delete this player: " + finalSelected.getFirstName().toUpperCase() + "?", matchId, finalSelected.getUserId() + "");
+                                            if(finalSelected.getId()!=match.getTeam2OwnerId()) {
+                                                String matchId = match.getId() + "";
+                                                confirmDeletePlayer("Do you want to delete this player: " + finalSelected.getFirstName().toUpperCase() + "?", matchId, finalSelected.getId() + "");
                                             }
                                             else{
                                                 String message="You can not remove the team owner";
@@ -439,7 +439,7 @@ public class Match_Info extends Activity {
             if(match.getMyTeamId()!=0) {
 
                 myTeam=new Team();
-                myTeam.setTeamId(match.getMyTeamId());
+                myTeam.setId(match.getMyTeamId());
                 myTeam.setName(match.getMyTeamName());
                 myTeam.setProvinceId(match.getMyTeamProvinceId());
                 myTeam.setProvinceName(match.getMyTeamProvinceName());
@@ -495,14 +495,14 @@ public class Match_Info extends Activity {
                             @Override
                             public void onClick(DialogInterface dialog, int item) {
 
-                                String idPositionToSearch = user.getSkills()[item].getSkillId();
+                                String idPositionToSearch = user.getSkills()[item].getId();
                                 String positionToSearch = skillsChar[item].toString();
                                 params.putString("team", teamJson);
                                 params.putString("idPositionToAdd", idPositionToSearch);
                                 params.putString("positionToAdd", positionToSearch);
                                 params.putCharSequenceArray("skillsChar", skillsChar);
                                 params.putBoolean("addingExtraPlayerToMatch", true);
-                                params.putInt("matchId", match.getMatchID());
+                                params.putInt("matchId", match.getId());
                                 search_player.putExtras(params);
                                 //startActivity(search_player);
                                 startActivityForResult(search_player, 1);

@@ -118,7 +118,7 @@ public class Add_New_Soccer_Center extends Activity {
 
                     if (verifyRequiredFields() == true) {
                         newSoccerCenter.setEncodedImage(encodedImage);
-                        newSoccerCenter.setOwnerId(user.getUserId());
+                        newSoccerCenter.setOwnerId(user.getId());
                         newSoccerCenter.setName(txtFields[0].getText().toString());
                         newSoccerCenter.setOpenTime(openHourSelected + ":" + openMinutesSelected);
                         newSoccerCenter.setCloseTime(closeHourSelected + ":" + closeMinutesSelected);
@@ -368,7 +368,7 @@ public class Add_New_Soccer_Center extends Activity {
                                     int proviceIdSelected = 0;
                                     for (int i = 0; i < provinces.length; i++) {
                                         if (ProvincesChar[which].toString().equals(provinces[i].getName())) {
-                                            proviceIdSelected = provinces[i].getProvinceId();
+                                            proviceIdSelected = provinces[i].getId();
                                             break;
                                         }
                                     }
@@ -436,7 +436,7 @@ public class Add_New_Soccer_Center extends Activity {
                                     for (int i = 0; i < cantons.length; i++) {
                                         if (CantonsChar[which].toString().equals(cantons[i].getName())) {
                                             canton = cantons[i];
-                                            newSoccerCenter.setCantonId(canton.getCantonId());
+                                            newSoccerCenter.setCantonId(canton.getId());
                                             break;
                                         }
                                     }
@@ -477,7 +477,7 @@ public class Add_New_Soccer_Center extends Activity {
             public void onClick(DialogInterface dialog, int which) {
 
                 mSoccerCenters tempSoccerCenter = newSoccerCenter;
-                tempSoccerCenter.setSoccerCenterId(soccerCenterId);
+                tempSoccerCenter.setId(soccerCenterId);
                 String soccerCenterJson = gson.toJson(tempSoccerCenter);
 
                 Intent add_New_Soccer_Field = new Intent(getApplicationContext(), Add_New_Soccer_Field.class);

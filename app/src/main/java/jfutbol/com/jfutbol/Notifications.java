@@ -78,7 +78,7 @@ public class Notifications extends Fragment {
         protected mNotifications[] doInBackground(User... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/playersNotifications/"+user.getUserId());
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/playersNotifications/"+user.getId());
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -257,7 +257,7 @@ public class Notifications extends Fragment {
                 public void onClick(DialogInterface dialog, int which) {
 
                     UpdateFieldDisponibilityRequestStatusTask task1 = new UpdateFieldDisponibilityRequestStatusTask();
-                    task1.execute(new String[]{keyId, rejected, user.getUserId().toString()});
+                    task1.execute(new String[]{keyId, rejected, user.getId().toString()});
                     UpdateNotificationStatusTask task2 = new UpdateNotificationStatusTask();
                     task2.execute(notificationSelected);
 
@@ -269,7 +269,7 @@ public class Notifications extends Fragment {
                 public void onClick(DialogInterface dialog, int which) {
 
                     UpdateFieldDisponibilityRequestStatusTask task1 = new UpdateFieldDisponibilityRequestStatusTask();
-                    task1.execute(new String[]{keyId, approved, user.getUserId().toString()});
+                    task1.execute(new String[]{keyId, approved, user.getId().toString()});
                     UpdateNotificationStatusTask task2 = new UpdateNotificationStatusTask();
                     task2.execute(notificationSelected);
                     dialog.dismiss();
@@ -290,7 +290,7 @@ public class Notifications extends Fragment {
                 public void onClick(DialogInterface dialog, int which) {
 
                     UpdateTeamdDisponibilityRequestStatusTask task1 = new UpdateTeamdDisponibilityRequestStatusTask();
-                    task1.execute(new String[]{keyId, rejected, user.getUserId().toString()});
+                    task1.execute(new String[]{keyId, rejected, user.getId().toString()});
                     UpdateNotificationStatusTask task2 = new UpdateNotificationStatusTask();
                     task2.execute(notificationSelected);
                     dialog.dismiss();
@@ -301,7 +301,7 @@ public class Notifications extends Fragment {
                 public void onClick(DialogInterface dialog, int which) {
 
                     UpdateTeamdDisponibilityRequestStatusTask task1 = new UpdateTeamdDisponibilityRequestStatusTask();
-                    task1.execute(new String[]{keyId, approved, user.getUserId().toString()});
+                    task1.execute(new String[]{keyId, approved, user.getId().toString()});
                     UpdateNotificationStatusTask task2 = new UpdateNotificationStatusTask();
                     task2.execute(notificationSelected);
                     dialog.dismiss();
@@ -387,7 +387,7 @@ public class Notifications extends Fragment {
         protected JSONObject doInBackground(mNotifications... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/playersNotificationStatus/"+params[0].getNotificationsId());
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/playersNotificationStatus/"+params[0].getId());
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {

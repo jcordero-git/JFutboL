@@ -102,7 +102,7 @@ public class MySoccerCenters extends Fragment {
         protected mSoccerCenters[] doInBackground(mSoccerCenters... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMySoccerCenters= new HttpGet(url_host_connection_secure+"/soccercenter/"+user.getUserId());
+            final HttpGet httpGetMySoccerCenters= new HttpGet(url_host_connection_secure+"/soccercenter/"+user.getId());
             httpGetMySoccerCenters.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -198,7 +198,7 @@ public class MySoccerCenters extends Fragment {
                                 if(item==2)
                                 {
                                     try {
-                                        confirmDeleteSoccerCenter("Do you want to delete this Soccer Center: " + finalSelected.getName() + "?", finalSelected.getSoccerCenterId() + "");
+                                        confirmDeleteSoccerCenter("Do you want to delete this Soccer Center: " + finalSelected.getName() + "?", finalSelected.getId() + "");
 
                                     } catch (Exception e) {
                                         e.printStackTrace();

@@ -9,11 +9,11 @@ import java.util.Date;
  */
 public class mMatches {
 
-    int matchID;
-    int team1ID;
+    int id;
+    int team1Id;
     String team1Name;
     int goalsTeam1;
-    int team2ID;
+    int team2Id;
     String team2Name;
     int goalsTeam2;
     String date;
@@ -37,20 +37,20 @@ public class mMatches {
     String myTeamCantonName;
 
 
-    public int getMatchID() {
-        return matchID;
+    public int getId() {
+        return id;
     }
 
-    public void setMatchID(int matchesId) {
-        this.matchID = matchesId;
+    public void setId(int matchId) {
+        this.id = matchId;
     }
 
-    public int getTeam1ID() {
-        return team1ID;
+    public int getTeam1Id() {
+        return team1Id;
     }
 
-    public void setTeam1ID(int team1ID) {
-        this.team1ID = team1ID;
+    public void setTeam1Id(int team1Id) {
+        this.team1Id = team1Id;
     }
 
     public String getTeam1Name() {
@@ -69,12 +69,12 @@ public class mMatches {
         this.goalsTeam1 = goalsTeam1;
     }
 
-    public int getTeam2ID() {
-        return team2ID;
+    public int getTeam2Id() {
+        return team2Id;
     }
 
-    public void setTeam2ID(int team2ID) {
-        this.team2ID = team2ID;
+    public void setTeam2Id(int team2Id) {
+        this.team2Id = team2Id;
     }
 
     public String getTeam2Name() {

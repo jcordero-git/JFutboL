@@ -5,13 +5,13 @@ package jfutbol.com.jfutbol.model;
  */
 public class PlayerSkills {
 
-    String skillId;
+    String id;
     String skillName;
     Boolean value;
     int intValue;
 
-    public PlayerSkills(String skillId, String skillName, int intValue) {
-        this.skillId=skillId;
+    public PlayerSkills(String id, String skillName, int intValue) {
+        this.id=id;
         this.skillName=skillName;
         this.intValue=intValue;
 
@@ -21,9 +21,9 @@ public class PlayerSkills {
             value = false;
     }
 
-    public String getSkillId() { return skillId; }
+    public String getId() { return id; }
 
-    public void setSkillId(String skillId) { this.skillId = skillId; }
+    public void setId(String id) { this.id = id; }
 
     public String getSkillName() { return skillName; }
 
@@ -46,8 +46,8 @@ public class PlayerSkills {
         this.intValue=intValue;
     }
 
-    public void setSkill(String skillId, String skill, Boolean value) {
-        this.skillId=skillId;
+    public void setSkill(String id, String skill, Boolean value) {
+        this.id=id;
         this.value = value;
         if(value)
             intValue=1;

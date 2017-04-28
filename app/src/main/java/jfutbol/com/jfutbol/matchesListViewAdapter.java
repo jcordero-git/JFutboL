@@ -78,8 +78,8 @@ public class matchesListViewAdapter extends BaseAdapter {
 
         values = mDataset.get(position);
 
-        aq.id(viewHolder.mImgTeam1).image(url_host_connection+"/images/team/"+values.getTeam1ID()+".png", true, true);
-        aq.id(viewHolder.mImgTeam2).image(url_host_connection+"/images/team/"+values.getTeam2ID()+".png", true, true);
+        aq.id(viewHolder.mImgTeam1).image(url_host_connection+"/images/team/"+values.getTeam1Id()+".png", true, true);
+        aq.id(viewHolder.mImgTeam2).image(url_host_connection+"/images/team/"+values.getTeam2Id()+".png", true, true);
         viewHolder.mLbTeam1Name.setText(values.getTeam1Name());
         viewHolder.mLbGoalsTeam1.setText(values.getGoalsTeam1()+"");
         viewHolder.mLbTeam2Name.setText(values.getTeam2Name());

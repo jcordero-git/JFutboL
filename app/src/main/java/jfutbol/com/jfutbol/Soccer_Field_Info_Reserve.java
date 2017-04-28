@@ -160,7 +160,7 @@ public class Soccer_Field_Info_Reserve extends Activity {
         TextView lbTimeRange = (TextView) findViewById(R.id.lbTimeRange);
 
         aq = new AQuery(Soccer_Field_Info_Reserve.this, root);
-        aq.id(R.id.imgSoccerField).image(url_host_connection+"/images/soccerfield/"+soccerField.getSoccerFieldId()+".png", memCache, fileCache);
+        aq.id(R.id.imgSoccerField).image(url_host_connection+"/images/soccerfield/"+soccerField.getId()+".png", memCache, fileCache);
         lbSoccerCenterName.setText(soccerField.getSoccerCenterName());
         lbSoccerFieldName.setText(soccerField.getName());
         lbTimeRange.setText("OPEN FROM: "+soccerField.getOpenTimeApp()+" TO "+soccerField.getCloseTimeApp());
@@ -185,7 +185,7 @@ public class Soccer_Field_Info_Reserve extends Activity {
         protected mSoccerFieldAvailableHours[] doInBackground(String... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGet= new HttpGet(url_host_connection_secure+"/soccerfield/"+soccerField.getSoccerFieldId()+"/reservedHours/"+params[0]);
+            final HttpGet httpGet= new HttpGet(url_host_connection_secure+"/soccerfield/"+soccerField.getId()+"/reservedHours/"+params[0]);
             httpGet.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -258,7 +258,7 @@ public class Soccer_Field_Info_Reserve extends Activity {
                             Gson gson = new GsonBuilder()
                                     .setDateFormat("yyyy-MM-dd")
                                     .create();
-                            mSoccerFieldAvailableHoursSelected.setSoccerFieldId(soccerField.getSoccerFieldId());
+                            mSoccerFieldAvailableHoursSelected.setSoccerFieldId(soccerField.getId());
                             mSoccerFieldAvailableHoursSelected.setSoccerFieldName(soccerField.getName());
                             mSoccerFieldAvailableHoursSelected.setSoccerCenterdId(soccerField.getSoccerCenterId());
                             mSoccerFieldAvailableHoursSelected.setSoccerCenterName(soccerField.getSoccerCenterName());

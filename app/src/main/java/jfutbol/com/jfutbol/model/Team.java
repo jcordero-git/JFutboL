@@ -5,7 +5,7 @@ package jfutbol.com.jfutbol.model;
  */
 public class Team {
 
-    private int teamId;
+    private int id;
     private int ownerId;
     private int captainId;
     private String completeCaptainName;
@@ -20,17 +20,17 @@ public class Team {
     public Team(){}
 
     public Team(int teamId, int ownerId, String name){
-        this.teamId = teamId;
+        this.id = teamId;
         this.ownerId = ownerId;
         this.name = name;
     }
 
-    public int getTeamId() {
-        return teamId;
+    public int getId() {
+        return id;
     }
 
-    public void setTeamId(int teamId) {
-        this.teamId = teamId;
+    public void setId(int teamId) {
+        this.id = teamId;
     }
 
     public int getOwnerId() {

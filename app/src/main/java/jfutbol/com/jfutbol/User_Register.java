@@ -272,7 +272,7 @@ public class User_Register extends Activity {
                                     user.setUserType(2);
                                 }
                                 user.setProvinceId(canton.getProvinceId());
-                                user.setCantonId(canton.getCantonId());
+                                user.setCantonId(canton.getId());
                                 user.setEncodedImage(encodedImage);
                                 RegisterUserTask task = new RegisterUserTask();
                                 task.execute(user);
@@ -801,7 +801,7 @@ public class User_Register extends Activity {
                                     int proviceIdSelected = 0;
                                     for (int i = 0; i < provinces.length; i++) {
                                         if (ProvincesChar[which].toString().equals(provinces[i].getName())) {
-                                            proviceIdSelected = provinces[i].getProvinceId();
+                                            proviceIdSelected = provinces[i].getId();
                                             break;
                                         }
                                     }

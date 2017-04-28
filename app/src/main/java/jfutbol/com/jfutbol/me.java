@@ -82,7 +82,7 @@ public class me extends Fragment {
         root = inflater.inflate(R.layout.fragment_me, container, false);
         aq = new AQuery(getActivity(), root);
 
-        aq.id(R.id.imgMe).image(url_host_connection+"/images/profile/"+user.getUserId()+".png", memCache, fileCache);
+        aq.id(R.id.imgMe).image(url_host_connection+"/images/profile/"+user.getId()+".png", memCache, fileCache);
 
         coordinatorLayout = root.findViewById(R.id.coordinatorLayout);
         RelativeLayout RLPlayer = (RelativeLayout) root.findViewById(R.id.idRLPlayers);
@@ -91,7 +91,7 @@ public class me extends Fragment {
             RLPlayer.setVisibility(View.INVISIBLE);
 
         GetUpdateUserInfoTask userInfoTask = new GetUpdateUserInfoTask();
-        userInfoTask.execute(new String[]{user.getUserId().toString()});
+        userInfoTask.execute(new String[]{user.getId().toString()});
 
         GetMyTeamsTask teamTask = new GetMyTeamsTask();
         teamTask.execute();
@@ -183,7 +183,7 @@ public class me extends Fragment {
                                 if(item==0)
                                 {
                                     try {
-                                        confirmDeleteSkill("Do you want to remove this skill: "+ finalSelected.getSkillName()+"?" ,user.getUserId()+"", finalSelected.getSkillId());
+                                        confirmDeleteSkill("Do you want to remove this skill: "+ finalSelected.getSkillName()+"?" ,user.getId()+"", finalSelected.getId());
 
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -213,7 +213,7 @@ public class me extends Fragment {
         protected PlayerSkills[] doInBackground(PlayerSkills... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMySkills= new HttpGet(url_host_connection_secure+"/players/"+user.getUserId()+"/skills");
+            final HttpGet httpGetMySkills= new HttpGet(url_host_connection_secure+"/players/"+user.getId()+"/skills");
             httpGetMySkills.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -273,7 +273,7 @@ public class me extends Fragment {
                                 if(item==0)
                                 {
                                     try {
-                                        confirmDeleteSkill("Do you want to remove this skill: "+ finalSelected.getSkillName()+"?" ,user.getUserId()+"", finalSelected.getSkillId());
+                                        confirmDeleteSkill("Do you want to remove this skill: "+ finalSelected.getSkillName()+"?" ,user.getId()+"", finalSelected.getId());
 
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -302,7 +302,7 @@ public class me extends Fragment {
         protected Team[] doInBackground(Team... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/players/"+user.getUserId()+"/teams");
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/players/"+user.getId()+"/teams");
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -379,7 +379,7 @@ public class me extends Fragment {
                                 if(item==0)
                                 {
                                     try {
-                                        confirmDeleteTeam("Do you want to leave this team: "+ finalSelected.getName()+"?" , finalSelected.getTeamId()+"");
+                                        confirmDeleteTeam("Do you want to leave this team: "+ finalSelected.getName()+"?" , finalSelected.getId()+"");
 
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -577,11 +577,11 @@ public class me extends Fragment {
     }
 
     public static void refreshUserInfo() {
-        aq.id(R.id.imgMe).image(url_host_connection + "/images/profile/" + user.getUserId() + ".png", memCache, fileCache);
+        aq.id(R.id.imgMe).image(url_host_connection + "/images/profile/" + user.getId() + ".png", memCache, fileCache);
         GetMyTeamsTask teamTask = new GetMyTeamsTask();
         teamTask.execute();
         GetUpdateUserInfoTask userInfoTask = new GetUpdateUserInfoTask();
-        userInfoTask.execute(new String[]{user.getUserId().toString()});
+        userInfoTask.execute(new String[]{user.getId().toString()});
     }
 
     @Override

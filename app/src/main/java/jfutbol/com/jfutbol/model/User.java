@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class User {
 
-    private int userId;
+    private int id;
     String email;
     String password;
     String firstName;
@@ -35,9 +35,9 @@ public class User {
 
     public User(){ }
 
-    public Integer getUserId() { return userId; }
+    public Integer getId() { return id; }
 
-    public void setUserId(int userId) { this.userId = userId; }
+    public void setId(int id) { this.id = id; }
 
     public String getEmail() { return email; }
 
@@ -79,7 +79,7 @@ public class User {
         return toReturn;
     }
 
-    public String getSkillName(int index) { return skills[index].getSkillId(); }
+    public String getSkillName(int index) { return skills[index].getId(); }
 
     public boolean verifySkillName(ArrayList<String> skill) {
          boolean status=false;

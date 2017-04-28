@@ -345,7 +345,7 @@ public class Login extends Activity {
         @Override
         protected void onPostExecute(User user) {
             if(user!=null) {
-                if (user.getUserId() > 0) {
+                if (user.getId() > 0) {
                     String message;
                     Intent nextIntent = null;
                     Bundle params = new Bundle();

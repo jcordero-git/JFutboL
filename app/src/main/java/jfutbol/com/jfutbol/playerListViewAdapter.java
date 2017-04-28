@@ -86,7 +86,7 @@ public class playerListViewAdapter extends BaseAdapter {
         //txtPlayerCompleteName= (TextView) convertView.findViewById(R.id.txtPlayerCompleteNameID);
 
         values = mDataset.get(position);
-        Integer playerId = values.getUserId();
+        Integer playerId = values.getId();
         String playerName = values.getFirstName();
         String playerLastName = values.getLastName();
         String age = values.getAge();
@@ -112,7 +112,7 @@ public class playerListViewAdapter extends BaseAdapter {
         }
 
         if(mCaptainId!=0) {
-            if (mCaptainId.equals(values.getUserId())) {
+            if (mCaptainId.equals(values.getId())) {
             //    viewHolder.mCaptain.setBackgroundColor(convertView.getResources().getColor(R.color.captain));
                 aq.id(viewHolder.mCaptain).image(R.drawable.captain);
             }

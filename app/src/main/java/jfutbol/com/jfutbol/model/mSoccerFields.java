@@ -7,11 +7,7 @@ import java.util.Date;
  * Created by JOSEPH on 30/09/2015.
  */
 public class mSoccerFields {
-
-
-
-
-    int soccerFieldId;
+    int id;
     int soccerCenterId;
     String soccerCenterName;
     String name;
@@ -22,9 +18,9 @@ public class mSoccerFields {
     //Date closeTimeFormat;
     int status;
 
-    public int getSoccerFieldId() { return soccerFieldId; }
+    public int getId() { return id; }
 
-    public void setSoccerFieldId(int soccerFieldId) { this.soccerFieldId = soccerFieldId; }
+    public void setId(int soccerFieldId) { this.id = soccerFieldId; }
 
     public int getSoccerCenterId() {
         return soccerCenterId;

@@ -159,7 +159,7 @@ public class SearchPlayer extends Activity implements SearchView.OnQueryTextList
         provinceNameSelected=team.getProvinceName();
         cantonNameSelected=team.getCantonName();
         canton.setProvinceId(team.getProvinceId());
-        canton.setCantonId(team.getCantonId());
+        canton.setId(team.getCantonId());
 
         task = new GetPlayersTask();
         task.execute(new String[]{team.getProvinceId()+"",team.getCantonId()+""});
@@ -200,7 +200,7 @@ public class SearchPlayer extends Activity implements SearchView.OnQueryTextList
             if(addingExtraPlayerToMatch)
                 httpGetMyTeams= new HttpGet(url_host_connection_secure+"/players/match/"+matchId+"/"+params[0]+"/"+params[1]);
             else
-                httpGetMyTeams= new HttpGet(url_host_connection_secure+"/players/team/"+team.getTeamId()+"/"+params[0]+"/"+params[1]);
+                httpGetMyTeams= new HttpGet(url_host_connection_secure+"/players/team/"+team.getId()+"/"+params[0]+"/"+params[1]);
 
             //final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/players/"+params[0]+"/"+params[1]);
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
@@ -271,9 +271,9 @@ public class SearchPlayer extends Activity implements SearchView.OnQueryTextList
             final HttpClient httpClient = new DefaultHttpClient();
             final HttpPost httpPost;
             if(addingExtraPlayerToMatch)
-                httpPost= new HttpPost(url_host_connection_secure+"/matchPlayer/"+ matchId+"/"+team.getTeamId());
+                httpPost= new HttpPost(url_host_connection_secure+"/matchPlayer/"+ matchId+"/"+team.getId());
             else
-                httpPost= new HttpPost(url_host_connection_secure+"/team/"+team.getTeamId());
+                httpPost= new HttpPost(url_host_connection_secure+"/team/"+team.getId());
 
             httpPost.addHeader("x-access-token",token.getUser_token());
             try {
@@ -397,7 +397,7 @@ public class SearchPlayer extends Activity implements SearchView.OnQueryTextList
                             public void onClick(DialogInterface dialog, int id) {
                                 if(doRegionFilter) {
                                     task = new GetPlayersTask();
-                                    task.execute(new String[]{canton.getProvinceId() + "", canton.getCantonId() + ""});
+                                    task.execute(new String[]{canton.getProvinceId() + "", canton.getId() + ""});
                                 }
                                 listAdapter.filter("", mSelectedItems);
                                 doRegionFilter=false;
@@ -498,7 +498,7 @@ public class SearchPlayer extends Activity implements SearchView.OnQueryTextList
                                     int proviceIdSelected = 0;
                                     for (int i = 0; i < provinces.length; i++) {
                                         if (ProvincesChar[which].toString().equals(provinces[i].getName())) {
-                                            proviceIdSelected = provinces[i].getProvinceId();
+                                            proviceIdSelected = provinces[i].getId();
                                             provinceNameSelected=provinces[i].getName();
                                             break;
                                         }

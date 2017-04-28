@@ -74,9 +74,9 @@ public class teamListViewAdapter extends BaseAdapter {
         AQuery aq;
         aq = new AQuery(null, convertView);
         Team values = mDataset.get(position);
-        aq.id(viewHolder.mImage).image(url_host_connection+"/images/team/"+values.getTeamId()+".png", true, true);
+        aq.id(viewHolder.mImage).image(url_host_connection+"/images/team/"+values.getId()+".png", true, true);
         viewHolder.mTeamName.setText(values.getName());
-        viewHolder.mTeamName.setHint(values.getTeamId()+"");
+        viewHolder.mTeamName.setHint(values.getId()+"");
         viewHolder.mProvince.setText(values.getProvinceName());
         viewHolder.mCanton.setText(values.getCantonName());
         viewHolder.mCompleteCaptainName.setText(values.getCompleteCaptainName());

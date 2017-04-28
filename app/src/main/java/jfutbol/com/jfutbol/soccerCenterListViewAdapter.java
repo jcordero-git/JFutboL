@@ -65,7 +65,7 @@ public class soccerCenterListViewAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         values = mDataset.get(position);
-        Integer soccerCenterId = values.getSoccerCenterId();
+        Integer soccerCenterId = values.getId();
 
         AQuery aq;
         aq = new AQuery(null, convertView);

@@ -144,7 +144,7 @@ public class MyTeams extends Fragment {
         helpBuilder.setPositiveButton("Ok",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        Team newTeam=new Team(0,user.getUserId(),txtNewTeam.getText().toString().trim());
+                        Team newTeam=new Team(0,user.getId(),txtNewTeam.getText().toString().trim());
                         AddNewTeamTask task = new AddNewTeamTask();
                         task.execute(newTeam);
                        // while (saveNewTeamComplete!=true){}
@@ -194,7 +194,7 @@ public class MyTeams extends Fragment {
         protected Team[] doInBackground(Team... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/team/"+user.getUserId());
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/team/"+user.getId());
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -279,7 +279,7 @@ public class MyTeams extends Fragment {
                                 if(item==1)
                                 {
                                     try {
-                                        confirmDeleteTeam("Do you want to delete this team: "+ finalSelected.getName()+"?" , finalSelected.getTeamId()+"");
+                                        confirmDeleteTeam("Do you want to delete this team: "+ finalSelected.getName()+"?" , finalSelected.getId()+"");
 
                                     } catch (Exception e) {
                                         e.printStackTrace();

@@ -91,13 +91,13 @@ public class UserProfile extends Activity {
         });
 
         aq = new AQuery(UserProfile.this, null);
-        aq.id(R.id.imgMe).image(url_host_connection + "/images/profile/" + user.getUserId() + ".png", memCache, fileCache);
+        aq.id(R.id.imgMe).image(url_host_connection + "/images/profile/" + user.getId() + ".png", memCache, fileCache);
         lbSkills = (TextView) findViewById(R.id.lbSkills);
 
         lbSkills.setText("Skills");
 
         GetUpdateUserInfoTask userInfoTask = new GetUpdateUserInfoTask();
-        userInfoTask.execute(new String[]{user.getUserId().toString()});
+        userInfoTask.execute(new String[]{user.getId().toString()});
 
         GetMyTeamsTask teamTask = new GetMyTeamsTask();
         teamTask.execute();
@@ -165,7 +165,7 @@ public class UserProfile extends Activity {
         protected PlayerSkills[] doInBackground(PlayerSkills... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMySkills= new HttpGet(url_host_connection_secure+"/players/"+user.getUserId()+"/skills");
+            final HttpGet httpGetMySkills= new HttpGet(url_host_connection_secure+"/players/"+user.getId()+"/skills");
             httpGetMySkills.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -212,7 +212,7 @@ public class UserProfile extends Activity {
         protected Team[] doInBackground(Team... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             JSONObject responseJSON = null;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/players/"+user.getUserId()+"/teams");
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/players/"+user.getId()+"/teams");
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -292,11 +292,11 @@ public class UserProfile extends Activity {
     }
 
     public void refreshUserInfo() {
-        aq.id(R.id.imgMe).image(url_host_connection + "/images/profile/" + user.getUserId() + ".png", memCache, fileCache);
+        aq.id(R.id.imgMe).image(url_host_connection + "/images/profile/" + user.getId() + ".png", memCache, fileCache);
         GetMyTeamsTask teamTask = new GetMyTeamsTask();
         teamTask.execute();
         GetUpdateUserInfoTask userInfoTask = new GetUpdateUserInfoTask();
-        userInfoTask.execute(new String[]{user.getUserId().toString()});
+        userInfoTask.execute(new String[]{user.getId().toString()});
     }
 
     @Override

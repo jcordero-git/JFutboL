@@ -116,7 +116,7 @@ public class Add_New_Soccer_Field extends Activity {
                 {
                     if(verifyRequiredFields()==true && encodedImage.compareTo("")!=0) {
                         newSoccerField.setEncodedImage(encodedImage);
-                        newSoccerField.setSoccerCenterId(soccerCenter.getSoccerCenterId());
+                        newSoccerField.setSoccerCenterId(soccerCenter.getId());
                         newSoccerField.setName(txtFields[0].getText().toString());
                         newSoccerField.setStatus(1);
                         saveAndNew=false;
@@ -139,7 +139,7 @@ public class Add_New_Soccer_Field extends Activity {
                 {
                     if(verifyRequiredFields()==true && encodedImage.compareTo("")!=0)  {
                         newSoccerField.setEncodedImage(encodedImage);
-                        newSoccerField.setSoccerCenterId(soccerCenter.getSoccerCenterId());
+                        newSoccerField.setSoccerCenterId(soccerCenter.getId());
                         newSoccerField.setName(txtFields[0].getText().toString());
                         newSoccerField.setStatus(1);
                         saveAndNew=true;

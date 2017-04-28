@@ -5,16 +5,16 @@ package jfutbol.com.jfutbol.model;
  */
 public class mCantons {
 
-    int cantonId;
+    int id;
     int provinceId;
     String name;
 
-    public int getCantonId() {
-        return cantonId;
+    public int getId() {
+        return id;
     }
 
-    public void setCantonId(int cantonId) {
-        this.cantonId = cantonId;
+    public void setId(int cantonId) {
+        this.id = cantonId;
     }
 
     public int getProvinceId() {

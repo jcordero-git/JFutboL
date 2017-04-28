@@ -168,7 +168,7 @@ public class SearchMatch extends Activity {
             team1Json = params.getString("team");
             team1 = gson.fromJson(team1Json, Team.class);
             lbTeamName1.setText(team1.getName());
-            matches.setTeam1ID(team1.getTeamId());
+            matches.setTeam1Id(team1.getId());
             matches.setTeam1Name(team1.getName());
         }
         if(params.getString("soccerFieldAvailableHours")!=null) {
@@ -356,10 +356,10 @@ public class SearchMatch extends Activity {
             if(resultCode == RESULT_OK){
                 team1Json=data.getStringExtra("team");
                 team1=gson.fromJson(team1Json, Team.class);
-                aq.id(R.id.imgTeam1).image(url_host_connection+"/images/team/"+team1.getTeamId()+".png", memCache, fileCache);
+                aq.id(R.id.imgTeam1).image(url_host_connection+"/images/team/"+team1.getId()+".png", memCache, fileCache);
                 lbTeamName1.setText(team1.getName());
                 //lbCaptainName1.setText("Captain Name");
-                matches.setTeam1ID(team1.getTeamId());
+                matches.setTeam1Id(team1.getId());
                 matches.setTeam1Name(team1.getName());
                 showShowCase(imgTeam2, "You must pick an opposing team", ADD_TEAM2_SHOWCASE );
             }
@@ -372,10 +372,10 @@ public class SearchMatch extends Activity {
             if(resultCode == RESULT_OK){
                 team2Json=data.getStringExtra("team");
                 team2=gson.fromJson(team2Json, Team.class);
-                aq.id(R.id.imgTeam2).image(url_host_connection+"/images/team/"+team2.getTeamId()+".png", memCache, fileCache);
+                aq.id(R.id.imgTeam2).image(url_host_connection+"/images/team/"+team2.getId()+".png", memCache, fileCache);
                 lbTeamName2.setText(team2.getName());
                 //lbCaptainName2.setText("Captain Name");
-                matches.setTeam2ID(team2.getTeamId());
+                matches.setTeam2Id(team2.getId());
                 matches.setTeam2Name(team2.getName());
                 showShowCase(imgSoccerField, "Also you can change the soccer field clicking this icon", CHANGE_SOCCER_FIELD_SHOWCASE);
             }

@@ -296,12 +296,11 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
         ActivateNotificationThread();
         showShowCase(bar.getChildAt(1), "Use this menu to navigate under all app options", MENU_SHOWCASE);
 
-        suscribePushNotification(user.getUserId(), true);
+        suscribePushNotification(user.getId(), true);
 
 
 //method to use on player filter
-        loadSkills();
-
+        //loadSkills();
     }
 
 
@@ -499,7 +498,7 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
                 provinceNameSelected=user.getProvinceName();
                 cantonNameSelected=user.getCantonName();
                 canton.setProvinceId(user.getProvinceId());
-                canton.setCantonId(user.getCantonId());
+                canton.setId(user.getCantonId());
                 fragment = new Players();
                 Bundle args_players = new Bundle();
                 args_players.putString("user", userJson);
@@ -511,7 +510,7 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         if(menuItem.getTitle().equals(getResources().getString(R.string.refresh).toString())) {
                             //SearchSoccerField.refreshSoccerFields(canton.getProvinceId(), canton.getCantonId(), date, startHourSelected+":"+startMinutesSelected , endHourSelected+":"+endMinutesSelected );
-                            Players.refreshPlayers(canton.getProvinceId(), canton.getCantonId());
+                            Players.refreshPlayers(canton.getProvinceId(), canton.getId());
                             Players.listAdapter.filter("", mSelectedItems);
                         }
                         if(menuItem.getTitle().equals(getResources().getString(R.string.filter).toString())) {
@@ -527,7 +526,7 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
                 provinceNameSelected=user.getProvinceName();
                 cantonNameSelected=user.getCantonName();
                 canton.setProvinceId(user.getProvinceId());
-                canton.setCantonId(user.getCantonId());
+                canton.setId(user.getCantonId());
                 fragment = new SearchSoccerField();
                 Bundle args_soccer_field = new Bundle();
                 args_soccer_field.putString("user", userJson);
@@ -539,7 +538,7 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         if(menuItem.getTitle().equals(getResources().getString(R.string.refresh).toString())) {
                             //SearchSoccerField.refreshSoccerFields(canton.getProvinceId(), canton.getCantonId(), date, startHourSelected+":"+startMinutesSelected , endHourSelected+":"+endMinutesSelected );
-                            SearchSoccerField.refreshSoccerFields(canton.getProvinceId(), canton.getCantonId() );
+                            SearchSoccerField.refreshSoccerFields(canton.getProvinceId(), canton.getId() );
 
                         }
                         if(menuItem.getTitle().equals(getResources().getString(R.string.filter).toString())) {
@@ -744,7 +743,7 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
         protected Integer doInBackground(User... params) {
             final HttpClient httpClient = new DefaultHttpClient();
             Integer notificationCounter=0;
-            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/playersNotificationsCount/"+user.getUserId());
+            final HttpGet httpGetMyTeams= new HttpGet(url_host_connection_secure+"/playersNotificationsCount/"+user.getId());
             httpGetMyTeams.addHeader("x-access-token",token.getUser_token());
             try {
                 try {
@@ -811,7 +810,7 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
 
     public void logout() {
         DestroySessionActive();
-        suscribePushNotification(user.getUserId(), false);
+        suscribePushNotification(user.getId(), false);
         Intent login = new Intent(this, Login.class);
         startActivity(login);
         this.finish();
@@ -928,8 +927,8 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
                             public void onClick(DialogInterface dialog, int id) {
                                 if(doRegionFilter) {
                                     Players.user.setProvinceId(canton.getProvinceId());
-                                    Players.user.setCantonId(canton.getCantonId());
-                                    Players.refreshPlayers(canton.getProvinceId(), canton.getCantonId());
+                                    Players.user.setCantonId(canton.getId());
+                                    Players.refreshPlayers(canton.getProvinceId(), canton.getId());
                                 }
                                 Players.listAdapter.filter("", mSelectedItems);
                                 doRegionFilter=false;
@@ -1013,8 +1012,8 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 SearchSoccerField.user.setProvinceId(canton.getProvinceId());
-                                SearchSoccerField.user.setCantonId(canton.getCantonId());
-                                SearchSoccerField.refreshSoccerFields(canton.getProvinceId(), canton.getCantonId() );
+                                SearchSoccerField.user.setCantonId(canton.getId());
+                                SearchSoccerField.refreshSoccerFields(canton.getProvinceId(), canton.getId() );
                             }
                         }
                 );
@@ -1072,7 +1071,7 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
                                     int proviceIdSelected = 0;
                                     for (int i = 0; i < provinces.length; i++) {
                                         if (ProvincesChar[which].toString().equals(provinces[i].getName())) {
-                                            proviceIdSelected = provinces[i].getProvinceId();
+                                            proviceIdSelected = provinces[i].getId();
                                             provinceNameSelected=provinces[i].getName();
                                             break;
                                         }

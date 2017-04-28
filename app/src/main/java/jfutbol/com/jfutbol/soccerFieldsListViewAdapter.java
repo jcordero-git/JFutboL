@@ -67,7 +67,7 @@ public class soccerFieldsListViewAdapter extends BaseAdapter {
         status= (ImageView) convertView.findViewById(R.id.status);
 
         values = mDataset.get(position);
-        Integer soccerFieldId = values.getSoccerFieldId();
+        Integer soccerFieldId = values.getId();
         //String soccerFieldName = values.getName();
 
 
