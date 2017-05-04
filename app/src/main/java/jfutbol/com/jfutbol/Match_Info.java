@@ -487,7 +487,7 @@ public class Match_Info extends Activity {
                         //final CharSequence[] items = skillsList.toArray(new CharSequence[skillsList.size()]);
                         final CharSequence[] skillsChar = new CharSequence[skillsList.size()];
                         for (int i = 0; i < skillsList.size(); i++) {
-                            skillsChar[i] = user.getSkills()[i].getSkillName();
+                            skillsChar[i] = user.getSkills()[i].getName();
                         }
                         AlertDialog.Builder builder = new AlertDialog.Builder(Match_Info.this);
                         builder.setTitle("Position to add on: "+myTeam.getName().toUpperCase());

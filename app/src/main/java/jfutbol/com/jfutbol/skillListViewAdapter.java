@@ -59,7 +59,7 @@ public class skillListViewAdapter extends BaseAdapter {
         RL= (RelativeLayout) convertView.findViewById(R.id.relativeLayout);
 
         PlayerSkills values = mDataset.get(position);
-        String skillName = values.getSkillName();
+        String skillName = values.getName();
         viewHolder.mTextView.setText(skillName);
         return convertView;
     }

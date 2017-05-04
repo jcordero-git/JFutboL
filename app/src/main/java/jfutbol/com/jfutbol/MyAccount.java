@@ -480,10 +480,10 @@ public class MyAccount extends Activity {
                     public void onClick(View v) {
                         CloseKeyBoard();
                         for (int i = 0; i < skillsList.size(); i++) {
-                            skillsChar[i] = skills[i].getSkillName();
+                            skillsChar[i] = skills[i].getName();
                             if (user.getSkills()[i].getIntValue() == 1) {
                                 checkedItems[i] = true;
-                                mSelectedItems.add(user.getSkills()[i].getSkillName());
+                                mSelectedItems.add(user.getSkills()[i].getName());
                             }
                         }
                         AlertDialog.Builder builder = new AlertDialog.Builder(MyAccount.this);

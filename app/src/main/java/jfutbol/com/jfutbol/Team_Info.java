@@ -671,7 +671,7 @@ public class Team_Info extends Activity {
                     final CharSequence[] skillsChar = new CharSequence[skillsList.size()];
                     for(int i=0;i<skillsList.size();i++)
                         {
-                            skillsChar[i]=skills[i].getSkillName();
+                            skillsChar[i]=skills[i].getName();
                         }
                     AlertDialog.Builder builder = new AlertDialog.Builder(Team_Info.this);
                     builder.setTitle("Position to add");

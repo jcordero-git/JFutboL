@@ -6,13 +6,13 @@ package jfutbol.com.jfutbol.model;
 public class PlayerSkills {
 
     String id;
-    String skillName;
+    String name;
     Boolean value;
     int intValue;
 
     public PlayerSkills(String id, String skillName, int intValue) {
         this.id=id;
-        this.skillName=skillName;
+        this.name=skillName;
         this.intValue=intValue;
 
         if(intValue==1)
@@ -25,9 +25,9 @@ public class PlayerSkills {
 
     public void setId(String id) { this.id = id; }
 
-    public String getSkillName() { return skillName; }
+    public String getName() { return name; }
 
-    public void setSkillName(String skillName) { this.skillName = skillName; }
+    public void setName(String skillName) { this.name = skillName; }
 
     public Boolean getValue() {
     if(intValue==1)

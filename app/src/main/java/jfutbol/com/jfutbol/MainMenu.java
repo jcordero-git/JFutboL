@@ -971,7 +971,7 @@ public class MainMenu extends Activity  implements SearchView.OnQueryTextListene
         skillsChar = new CharSequence[skillsList.size()];
         for(int i=0;i<skillsList.size();i++)
         {
-            skillsChar[i]=user.getSkills()[i].getSkillName();
+            skillsChar[i]=user.getSkills()[i].getName();
         }
         checkedItems = new boolean[skillsChar.length];
         mSelectedItems = new ArrayList();

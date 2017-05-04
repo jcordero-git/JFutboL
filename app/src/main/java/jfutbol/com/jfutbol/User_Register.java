@@ -713,7 +713,7 @@ public class User_Register extends Activity {
 
                     for(int i=0;i<skillsList.size();i++)
                     {
-                        skillsChar[i]=skills[i].getSkillName();
+                        skillsChar[i]=skills[i].getName();
                     }
                     AlertDialog.Builder builder = new AlertDialog.Builder(User_Register.this);
                     builder.setTitle("Skills");

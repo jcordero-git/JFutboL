@@ -183,7 +183,7 @@ public class me extends Fragment {
                                 if(item==0)
                                 {
                                     try {
-                                        confirmDeleteSkill("Do you want to remove this skill: "+ finalSelected.getSkillName()+"?" ,user.getId()+"", finalSelected.getId());
+                                        confirmDeleteSkill("Do you want to remove this skill: "+ finalSelected.getName()+"?" ,user.getId()+"", finalSelected.getId());
 
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -273,7 +273,7 @@ public class me extends Fragment {
                                 if(item==0)
                                 {
                                     try {
-                                        confirmDeleteSkill("Do you want to remove this skill: "+ finalSelected.getSkillName()+"?" ,user.getId()+"", finalSelected.getId());
+                                        confirmDeleteSkill("Do you want to remove this skill: "+ finalSelected.getName()+"?" ,user.getId()+"", finalSelected.getId());
 
                                     } catch (Exception e) {
                                         e.printStackTrace();

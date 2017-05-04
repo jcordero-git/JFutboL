@@ -3,9 +3,9 @@
 
     <!-- URL HOST CONNECTION-->
     <!--    <string name="url_host_connection">http://186.176.211.115:3000</string>-->
-     <!--   <string name="url_host_connection">http://192.168.0.147:3001</string>-->
-    <string name="url_host_connection">https://jfutbol.herokuapp.com</string>
-    <!-- URL HOST CONNECTION-->
+       <string name="url_host_connection">http://192.168.1.68:3000</string>
+    <!--  <string name="url_host_connection">https://jfutbol.herokuapp.com</string>-->
+     <!-- URL HOST CONNECTION-->
 
     <!-- URL HOST CONNECTION-->
 

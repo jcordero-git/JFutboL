@@ -74,7 +74,7 @@ public class User {
         String []toReturn = new String[skills.length];
         for (int i=0;i<skills.length;i++)
         {
-            toReturn[i]=skills[i].getSkillName();
+            toReturn[i]=skills[i].getName();
         }
         return toReturn;
     }
@@ -85,7 +85,7 @@ public class User {
          boolean status=false;
             for(int k=0;k<skill.size();k++) {
                 for (int i = 0; i < skills.length; i++) {
-                    if (skills[i].getSkillName().contains(skill.get(k))) {
+                    if (skills[i].getName().contains(skill.get(k))) {
                         status = true;
                     }
                 }
